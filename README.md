@@ -1,5 +1,11 @@
 # MyBlog
 
+## GAS功能：
+1. Send Message 按下去的時候, 將 form的內容，送到Google App Script
+
+2. Google App Script收到之後, 填寫到 google sheets
+
+3. Google App Script 發送email通知給 jason.wu.tw@gmail.com 以及 jasonwutw@hotmail.com
 
 ## 串接 Google App Script (GAS) 的實作計畫。
 實作步驟摘要：
