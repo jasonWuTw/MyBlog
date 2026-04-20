@@ -1,7 +1,6 @@
 function doPost(e) {
   try {
-    // 取得當前的試算表 (如果你是從試算表內建立的腳本)
-    // 如果不是，請使用 SpreadsheetApp.openById("YOUR_SHEET_ID").getActiveSheet();
+    // 取得當前的試算表 
     var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
     
     // 取得表單參數
