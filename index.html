@@ -343,7 +343,9 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="https://script.google.com/macros/s/AKfycbwJ4N40DNFOELdFl4aL457yLhKkVX37t5Ckvo1KwclDMCZe_1U8gAP2Yy2HEnT4S3E5Mg/exec" method="post" class="php-email-form">
+            <form
+              action="https://script.google.com/macros/s/AKfycbz4m1MbwW2r4BlRf3kKPnZI8dGk2YND5-0abB-sGxx58b4xsDI7fJaJSc4kdE7HgpKe2Q/exec"
+              method="post" class="php-email-form">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -470,12 +472,12 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    document.querySelector('.php-email-form').addEventListener('submit', function(event) {
+    document.querySelector('.php-email-form').addEventListener('submit', function (event) {
       event.preventDefault();
 
       const thisForm = this;
       const action = thisForm.getAttribute('action');
-      
+
       thisForm.querySelector('.loading').classList.add('d-block');
       thisForm.querySelector('.error-message').classList.remove('d-block');
       thisForm.querySelector('.sent-message').classList.remove('d-block');
@@ -494,23 +496,23 @@
           'Content-Type': 'application/x-www-form-urlencoded'
         }
       })
-      .then(response => {
-        return response.text();
-      })
-      .then(data => {
-        thisForm.querySelector('.loading').classList.remove('d-block');
-        if (data.trim() == 'OK') {
-          thisForm.querySelector('.sent-message').classList.add('d-block');
-          thisForm.reset();
-        } else {
-          throw new Error(data ? data : 'Form submission failed');
-        }
-      })
-      .catch((error) => {
-        thisForm.querySelector('.loading').classList.remove('d-block');
-        thisForm.querySelector('.error-message').innerHTML = error;
-        thisForm.querySelector('.error-message').classList.add('d-block');
-      });
+        .then(response => {
+          return response.text();
+        })
+        .then(data => {
+          thisForm.querySelector('.loading').classList.remove('d-block');
+          if (data.trim() == 'OK') {
+            thisForm.querySelector('.sent-message').classList.add('d-block');
+            thisForm.reset();
+          } else {
+            throw new Error(data ? data : 'Form submission failed');
+          }
+        })
+        .catch((error) => {
+          thisForm.querySelector('.loading').classList.remove('d-block');
+          thisForm.querySelector('.error-message').innerHTML = error;
+          thisForm.querySelector('.error-message').classList.add('d-block');
+        });
     });
   </script>
 

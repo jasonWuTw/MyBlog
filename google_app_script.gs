@@ -17,7 +17,7 @@ function doPost(e) {
     ]);
     
     // 2. 發送 Email 通知
-    var recipients = "jason.wu.tw@gmail.com, Jasonwutw@gmail.com";
+    var recipients = "jason.wu.tw@gmail.com, jasonwutw@hotmail.com";
     var emailSubject = "新聯絡表單通知: " + data.subject;
     var emailBody = "您收到了一則新的聯絡訊息：\n\n" +
                     "姓名: " + data.name + "\n" +
